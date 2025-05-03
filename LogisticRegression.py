@@ -64,7 +64,6 @@ df = pre_df.dropna()
 df.isna().sum()
 
 
-# Not really sure what we're doing past this point
 df['down'] = df['down'].astype('category')
 df_no_ids = df.drop(columns = ['game_id', 'play_id', 'name', 'season'])
 df_no_ids = pd.get_dummies(df_no_ids, columns = ['down'])
